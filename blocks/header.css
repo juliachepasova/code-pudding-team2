@@ -3,8 +3,8 @@
   max-height: 800px;
   height: 100vh;
   padding-top: 30px;
-  display: flex;
-  flex-direction: column;
+  display: block;
+  text-align: center;
   position: relative;
   box-sizing: border-box;
 }
@@ -14,9 +14,8 @@
   font-size: 60px;
   line-height: 72px;
   font-weight: 500;
-  margin: 80px 0 0;
+  margin: auto;
   max-width: 729px;
-  padding-left: 80px;
   display: block;
 }
 .header__description {
@@ -24,6 +23,7 @@
   font-family: "Noto Serif", "Times New Roman", serif;
   font-size: 20px;
   line-height: 30px;
-  margin: 28px 0 0 80px;
+  margin: auto;
   max-width: 683px;
+  padding-top: 40px;
 }
