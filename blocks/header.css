@@ -1,0 +1,29 @@
+.header {
+  min-height: 720px;
+  max-height: 800px;
+  height: 100vh;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.header__title {
+  color: #d2c385;
+  font-size: 60px;
+  line-height: 72px;
+  font-weight: 500;
+  margin: 80px 0 0;
+  max-width: 729px;
+  padding-left: 80px;
+  display: block;
+}
+.header__description {
+  color: #d2c385;
+  font-family: "Noto Serif", "Times New Roman", serif;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 28px 0 0 80px;
+  max-width: 683px;
+}
