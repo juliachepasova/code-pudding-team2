@@ -18,6 +18,11 @@
   max-width: 729px;
   display: block;
 }
+
+.header__image {
+  width: 300px;
+}
+
 .header__description {
   color: #d2c385;
   font-family: "Noto Serif", "Times New Roman", serif;
