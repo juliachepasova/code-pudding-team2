@@ -1,0 +1,15 @@
+.views {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.views__avg-viewers-season-bar-chart {
+  width: 450px;
+  height: 400px;
+}
+
+.views__views-per-episode-heatmap-chart {
+  width: 450px;
+  height: 400px;
+}

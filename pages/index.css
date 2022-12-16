@@ -1,4 +1,7 @@
 @import url("../vendor/normalize.css");
 @import url("../blocks/page.css");
 @import url("../blocks/header.css");
+@import url("../blocks/viewerships.css");
+@import url("../blocks/views.css");
+@import url("../blocks/director-views.css");
 @import url("../blocks/footer.css");
