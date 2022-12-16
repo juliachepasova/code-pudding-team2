@@ -1,3 +1,3 @@
-# code-pudding-team2
+# code-pudding-Jetlagged
 
-A visual essay for Code Pudding with Practicum (December 2022).
+A visual essay for Code Pudding with Practicum (December 2022)
