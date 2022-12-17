@@ -328,6 +328,9 @@ anychart.onDocumentLoad(function () {
     { x: "Peter Bonerz", value: 12 },
   ]);
 
+  chart
+    .tooltip()
+    .format("Episodes: {%value}{groupsSeparator:\\,, decimalsCount:3}");
   chart.legend().itemsLayout("horizontal-expandable");
   chart.title("Number of Episodes by Director");
   chart.container("episodes-by-director__pie-chart");
@@ -354,9 +357,13 @@ anychart.onDocumentLoad(function () {
   const chart = anychart.heatMap();
   const customColorScale = anychart.scales.linearColor();
 
-  customColorScale.colors(["#FFFFFF", "FF0000"]);
+  // customColorScale.colors(["#FFFFFF", "FF0000"]);
+  customColorScale.colors(["0074FF", "#FF0000"]);
 
   chart.tooltip().titleFormat("{%y} {%x}");
+  chart
+    .tooltip()
+    .format("Views: {%heat}{groupsSeparator:\\,, decimalsCount:3}");
   chart.colorScale(customColorScale);
   chart.data(viewsPerEpisode);
   chart.title("Views Per Episode");
@@ -402,5 +409,9 @@ const data = [
 ];
 chart = anychart.column();
 const series = chart.column(data);
+
+chart.xAxis().title("Director");
+chart.yAxis().title("Average Episode Views");
+series.name("Avg. Views/episode");
 chart.container("highest-average-per-views__column-chart");
 chart.draw();
