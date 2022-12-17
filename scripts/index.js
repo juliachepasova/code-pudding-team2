@@ -46,7 +46,6 @@ const viewsPerEpisode = [
   { x: "E22", y: "S1", heat: 29900000.0 },
   { x: "E23", y: "S1", heat: 28700000.0 },
   { x: "E24", y: "S1", heat: 31300000.0 },
-  { x: "E25", y: "S1", heat: null },
   { x: "E1", y: "S2", heat: 32100000.0 },
   { x: "E2", y: "S2", heat: 29800000.0 },
   { x: "E3", y: "S2", heat: 30200000.0 },
@@ -71,7 +70,6 @@ const viewsPerEpisode = [
   { x: "E22", y: "S2", heat: 25500000.0 },
   { x: "E23", y: "S2", heat: 26100000.0 },
   { x: "E24", y: "S2", heat: 29000000.0 },
-  { x: "E25", y: "S2", heat: null },
   { x: "E1", y: "S3", heat: 26760000.0 },
   { x: "E2", y: "S3", heat: 26730000.0 },
   { x: "E3", y: "S3", heat: 25230000.0 },
@@ -121,7 +119,6 @@ const viewsPerEpisode = [
   { x: "E22", y: "S4", heat: 23150000.0 },
   { x: "E23", y: "S4", heat: 31610000.0 },
   { x: "E24", y: "S4", heat: 31610000.0 },
-  { x: "E25", y: "S4", heat: null },
   { x: "E1", y: "S5", heat: 31120000.0 },
   { x: "E2", y: "S5", heat: 25360000.0 },
   { x: "E3", y: "S5", heat: 26820000.0 },
@@ -146,7 +143,6 @@ const viewsPerEpisode = [
   { x: "E22", y: "S5", heat: 21280000.0 },
   { x: "E23", y: "S5", heat: 25900000.0 },
   { x: "E24", y: "S5", heat: 25900000.0 },
-  { x: "E25", y: "S5", heat: null },
   { x: "E1", y: "S6", heat: 27740000.0 },
   { x: "E2", y: "S6", heat: 22950000.0 },
   { x: "E3", y: "S6", heat: 21600000.0 },
@@ -196,7 +192,6 @@ const viewsPerEpisode = [
   { x: "E22", y: "S7", heat: 17230000.0 },
   { x: "E23", y: "S7", heat: 30050000.0 },
   { x: "E24", y: "S7", heat: 30050000.0 },
-  { x: "E25", y: "S7", heat: null },
   { x: "E1", y: "S8", heat: 31700000.0 },
   { x: "E2", y: "S8", heat: 30040000.0 },
   { x: "E3", y: "S8", heat: 29200000.0 },
@@ -221,7 +216,6 @@ const viewsPerEpisode = [
   { x: "E22", y: "S8", heat: 24310000.0 },
   { x: "E23", y: "S8", heat: 34910000.0 },
   { x: "E24", y: "S8", heat: 34910000.0 },
-  { x: "E25", y: "S8", heat: null },
   { x: "E1", y: "S9", heat: 34010000.0 },
   { x: "E2", y: "S9", heat: 28930000.0 },
   { x: "E3", y: "S9", heat: 26620000.0 },
@@ -246,7 +240,6 @@ const viewsPerEpisode = [
   { x: "E22", y: "S9", heat: 19550000.0 },
   { x: "E23", y: "S9", heat: 25460000.0 },
   { x: "E24", y: "S9", heat: 25460000.0 },
-  { x: "E25", y: "S9", heat: null },
   { x: "E1", y: "S10", heat: 24540000.0 },
   { x: "E2", y: "S10", heat: 22370000.0 },
   { x: "E3", y: "S10", heat: 21870000.0 },
@@ -265,14 +258,83 @@ const viewsPerEpisode = [
   { x: "E16", y: "S10", heat: 24510000.0 },
   { x: "E17", y: "S10", heat: 52460000.0 },
   { x: "E18", y: "S10", heat: 52460000.0 },
-  { x: "E19", y: "S10", heat: null },
-  { x: "E20", y: "S10", heat: null },
-  { x: "E21", y: "S10", heat: null },
-  { x: "E22", y: "S10", heat: null },
-  { x: "E23", y: "S10", heat: null },
-  { x: "E24", y: "S10", heat: null },
-  { x: "E25", y: "S10", heat: null },
 ];
+
+//pie chart for episodes per director
+anychart.onDocumentLoad(function () {
+  const chart = anychart.pie();
+  const data = {
+    "Ben Weiss": 10,
+    "David Schwimmer": 10,
+    "Gail Mancuso": 14,
+    "Gary Halvorson": 54,
+    "James Burrows": 15,
+    "Kevin S. Bright": 53,
+    "Michael Lembeck": 24,
+    Others: 44,
+    "Peter Bonerz": 12,
+  };
+  chart.data([
+    {
+      x: "Ben Weiss",
+      value: 10,
+      normal: {
+        fill: "#8B0000",
+        hatchFill: "percent50",
+      },
+    },
+    {
+      x: "David Schwimmer",
+      value: 10,
+      normal: {
+        fill: "#665236",
+        hatchFill: "percent50",
+      },
+    },
+    {
+      x: "Gail Mancuso",
+      value: 14,
+      normal: {
+        fill: "#DC861A",
+        hatchFill: "percent50",
+      },
+    },
+    {
+      x: "Gary Halvorson",
+      value: 54,
+      normal: {
+        fill: "#D2C385",
+        hatchFill: "percent50",
+      },
+    },
+    { x: "James Burrows", value: 15 },
+    {
+      x: "Kevin S. Bright",
+      value: 53,
+      normal: {
+        fill: "#715567",
+        hatchFill: "percent50",
+      },
+    },
+    {
+      x: "Michael Lembeck",
+      value: 24,
+      normal: {
+        fill: "#9C8CD4",
+        hatchFill: "percent50",
+      },
+    },
+    { x: "Others", value: 44 },
+    { x: "Peter Bonerz", value: 12 },
+  ]);
+
+  chart.legend().itemsLayout("horizontal-expandable");
+  chart.title("Number of Episodes by Director");
+  chart.container("episodes-by-director__pie-chart");
+  // chart.background().fill("#9c8cd4");
+  // chart.fontColor("black");
+  chart.draw();
+});
 
 //bar chart for average views per season
 anychart.onDocumentLoad(function () {
@@ -291,15 +353,14 @@ anychart.onDocumentLoad(function () {
 anychart.onDocumentLoad(function () {
   const chart = anychart.heatMap();
   const customColorScale = anychart.scales.linearColor();
+
   customColorScale.colors(["#FFFFFF", "FF0000"]);
 
+  chart.tooltip().titleFormat("{%y} {%x}");
   chart.colorScale(customColorScale);
   chart.data(viewsPerEpisode);
-
   chart.title("Views Per Episode");
-
   chart.container("views-per-episode");
-
   chart.draw();
 });
 
@@ -328,52 +389,18 @@ anychart.onDocumentLoad(function () {
   chart.draw();
 });
 
-// const averageViewershipBySeasonContainer = document.querySelector(
-//   ".avg-viewers-season"
-// );
-// const highestLowestViewedDirectorsContainer =
-//   document.querySelector(".views-by-director");
-
-// google.charts.load("current", { packages: ["corechart"] });
-// google.charts.setOnLoadCallback(drawAverageViewershipBySeasonChart);
-// google.charts.setOnLoadCallback(drawHighestLowestViewedDirectorsChart);
-
-// function drawHighestLowestViewedDirectorsChart() {
-//   const data = google.visualization.arrayToDataTable(
-//     highestLowestViewedDirectors
-//   );
-
-//   const options = {
-//     title: "Highest and Lowest Viewed Directors",
-//     hAxis: {
-//       title: "Director",
-//     },
-//     vAxis: {
-//       title: "Viewers",
-//     },
-//   };
-
-//   const chart = new google.visualization.ColumnChart(
-//     highestLowestViewedDirectorsContainer
-//   );
-//   chart.draw(data, options);
-// }
-
-// function drawAverageViewershipBySeasonChart() {
-//   const data = google.visualization.arrayToDataTable(averageViewershipBySeason);
-
-//   const options = {
-//     title: "Average Number Of Total Viewers Per Season",
-//     hAxis: {
-//       title: "Season",
-//     },
-//     vAxis: {
-//       title: "Viewers",
-//     },
-//   };
-
-//   const chart = new google.visualization.ColumnChart(
-//     averageViewershipBySeasonContainer
-//   );
-//   chart.draw(data, options);
-// }
+//column chart for best average view
+const data = [
+  ["Michael Lembeck", 29587916.6666666679],
+  ["Kevin S. Bright", 27333584.905660376],
+  ["Gail Mancuso", 25520000.0],
+  ["Peter Bonerz", 25005833.3333333321],
+  ["James Burrows", 24776666.6666666679],
+  ["David Schwimmer", 24433000.0],
+  ["Ben Weiss", 23780000.0],
+  ["Gary Halvorson", 22361296.2962962948],
+];
+chart = anychart.column();
+const series = chart.column(data);
+chart.container("highest-average-per-views__column-chart");
+chart.draw();
