@@ -274,6 +274,81 @@ const viewsPerEpisode = [
   { x: "E25", y: "S10", heat: null },
 ];
 
+//pie chart for episodes per director
+anychart.onDocumentLoad(function () {
+  const chart = anychart.pie();
+  const data = {
+    "Ben Weiss": 10,
+    "David Schwimmer": 10,
+    "Gail Mancuso": 14,
+    "Gary Halvorson": 54,
+    "James Burrows": 15,
+    "Kevin S. Bright": 53,
+    "Michael Lembeck": 24,
+    Others: 44,
+    "Peter Bonerz": 12,
+  };
+  chart.data([
+    {
+      x: "Ben Weiss",
+      value: 10,
+      normal: {
+        fill: "#8B0000",
+        hatchFill: "percent50",
+      },
+    },
+    {
+      x: "David Schwimmer",
+      value: 10,
+      normal: {
+        fill: "#665236",
+        hatchFill: "percent50",
+      },
+    },
+    {
+      x: "Gail Mancuso",
+      value: 14,
+      normal: {
+        fill: "#DC861A",
+        hatchFill: "percent50",
+      },
+    },
+    {
+      x: "Gary Halvorson",
+      value: 54,
+      normal: {
+        fill: "#D2C385",
+        hatchFill: "percent50",
+      },
+    },
+    { x: "James Burrows", value: 15 },
+    {
+      x: "Kevin S. Bright",
+      value: 53,
+      normal: {
+        fill: "#715567",
+        hatchFill: "percent50",
+      },
+    },
+    {
+      x: "Michael Lembeck",
+      value: 24,
+      normal: {
+        fill: "#9C8CD4",
+        hatchFill: "percent50",
+      },
+    },
+    { x: "Others", value: 44 },
+    { x: "Peter Bonerz", value: 12 },
+  ]);
+
+  chart.title("Number of Episodes by Director");
+  chart.container("episodes-by-director__pie-chart");
+  //chart.background().fill("#9c8cd4");
+  //chart.fontColor("black"); not working
+  chart.draw();
+});
+
 //bar chart for average views per season
 anychart.onDocumentLoad(function () {
   const chart = anychart.column();
@@ -327,6 +402,22 @@ anychart.onDocumentLoad(function () {
   chart.yAxis().title("Total Views");
   chart.draw();
 });
+
+//column chart for best average view
+const data = [
+  ["Michael Lembeck", 29587916.6666666679],
+  ["Kevin S. Bright", 27333584.905660376],
+  ["Gail Mancuso", 25520000.0],
+  ["Peter Bonerz", 25005833.3333333321],
+  ["James Burrows", 24776666.6666666679],
+  ["David Schwimmer", 24433000.0],
+  ["Ben Weiss", 23780000.0],
+  ["Gary Halvorson", 22361296.2962962948],
+];
+chart = anychart.column();
+const series = chart.column(data);
+chart.container("highest-average-per-views__column-chart");
+chart.draw();
 
 // const averageViewershipBySeasonContainer = document.querySelector(
 //   ".avg-viewers-season"
