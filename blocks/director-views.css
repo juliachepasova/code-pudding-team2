@@ -1,11 +1,19 @@
 .director-views {
   padding-bottom: 40px;
 }
+
+.director-views__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .director-views__title {
   text-align: center;
 }
 
 .director-views__bar-chart {
-  width: 900px;
+  width: 500px;
   height: 400px;
 }
