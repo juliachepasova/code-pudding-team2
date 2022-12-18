@@ -1,3 +1,12 @@
+@keyframes rotation {
+  from {
+    transform: rotate(20deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .header {
   min-height: 720px;
   max-height: 800px;
@@ -10,7 +19,6 @@
 }
 
 .header__title {
-  color: #d2c385;
   font-size: 60px;
   line-height: 72px;
   font-weight: 500;
@@ -24,11 +32,22 @@
 }
 
 .header__description {
-  color: #d2c385;
   font-family: "Noto Serif", "Times New Roman", serif;
   font-size: 20px;
   line-height: 30px;
   margin: auto;
   max-width: 683px;
   padding-top: 40px;
+}
+
+.header__description-image {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  rotate: 20deg;
+  top: 40px;
+}
+
+.header__description-image:hover {
+  animation: rotation 1.3s linear;
 }
