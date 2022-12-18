@@ -1,21 +1,26 @@
 const averageViewershipBySeason = [
-  ["S1", 24791666.6666666679],
-  ["S2", 31720833.3333333321],
-  ["S3", 26081200.0],
-  ["S4", 24947916.6666666679],
-  ["S5", 24747500.0],
-  ["S6", 23045200.0],
-  ["S7", 22051666.6666666679],
-  ["S8", 26720000.0],
-  ["S9", 23928333.3333333321],
-  ["S10", 26126666.6666666679],
+  ["1", 24791666.6666666679],
+  ["2", 31720833.3333333321],
+  ["3", 26081200.0],
+  ["4", 24947916.6666666679],
+  ["5", 24747500.0],
+  ["6", 23045200.0],
+  ["7", 22051666.6666666679],
+  ["8", 26720000.0],
+  ["9", 23928333.3333333321],
+  ["10", 26126666.6666666679],
 ];
 
-const highestLowestViewedDirectors = [
+const highestViewedDirectors = [
   ["Michael Lembeck", 52900000.0],
   ["Kevin S. Bright", 52460000.0],
   ["James Burrows", 33600000.0],
-  [],
+  // ["Kevin S. Bright & Gary Halvorson", 17230000.0],
+  // ["Arlene Sanford", 18200000.0],
+  // ["Todd Holland", 21880000.0],
+];
+
+const lowestViewedDirectors = [
   ["Kevin S. Bright & Gary Halvorson", 17230000.0],
   ["Arlene Sanford", 18200000.0],
   ["Todd Holland", 21880000.0],
@@ -362,8 +367,8 @@ anychart.onDocumentLoad(function () {
 //bar chart for average views per season
 anychart.onDocumentLoad(function () {
   const chart = anychart.column();
-
   const column = chart.column(averageViewershipBySeason);
+
   column.name("Avg. Views");
   chart.title("Average Viewers Per Season");
   chart.container("avg-viewers-season");
@@ -396,7 +401,33 @@ anychart.onDocumentLoad(function () {
 //chart for three highest and three lowest total views by directors
 anychart.onDocumentLoad(function () {
   const chart = anychart.column();
-  const column = chart.column(highestLowestViewedDirectors);
+  const column = chart.column(highestViewedDirectors);
+
+  chart
+    .xAxis()
+    .labels()
+    .format(function () {
+      const value = this.value;
+      if (typeof value === "number") {
+        return "";
+      } else {
+        return value;
+      }
+    });
+  // chart.xAxis().labels().width(100);
+  column.name("Total Views");
+  chart.container("highest-director-views__bar-chart");
+  chart.title("Most Viewed Directors");
+  chart.xAxis().title("Director");
+  chart.yAxis().title("Total Views");
+  chart.xAxis().labels().rotation(-75);
+  chart.background().fill("#f1f0e9");
+  chart.draw();
+});
+
+anychart.onDocumentLoad(function () {
+  const chart = anychart.column();
+  const column = chart.column(lowestViewedDirectors);
 
   chart
     .xAxis()
@@ -410,11 +441,13 @@ anychart.onDocumentLoad(function () {
       }
     });
   chart.xAxis().labels().width(100);
+  chart.yScale().maximum(60000000);
   column.name("Total Views");
-  chart.container("director-views__bar-chart");
-  chart.title("Highest and Lowest Viewed Directors");
+  chart.container("lowest-director-views__bar-chart");
+  chart.title("Least Viewed Directors");
   chart.xAxis().title("Director");
   chart.yAxis().title("Total Views");
+  chart.xAxis().labels().rotation(-75);
   chart.background().fill("#f1f0e9");
   chart.draw();
 });
@@ -435,6 +468,8 @@ const series = chart.column(data);
 
 chart.xAxis().title("Director");
 chart.yAxis().title("Average Episode Views");
+chart.yAxis().labels().rotation(-90);
+chart.xAxis().labels().rotation(-75);
 
 series.name("Avg. Views/episode");
 chart.container("highest-average-per-views__column-chart");
