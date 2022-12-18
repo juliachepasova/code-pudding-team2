@@ -279,7 +279,7 @@ anychart.onDocumentLoad(function () {
       x: "Ben Weiss",
       value: 10,
       normal: {
-        fill: "#8B0000",
+        fill: "#D1C3EA",
         hatchFill: "percent50",
       },
     },
@@ -287,7 +287,7 @@ anychart.onDocumentLoad(function () {
       x: "David Schwimmer",
       value: 10,
       normal: {
-        fill: "#665236",
+        fill: "#695192",
         hatchFill: "percent50",
       },
     },
@@ -295,7 +295,7 @@ anychart.onDocumentLoad(function () {
       x: "Gail Mancuso",
       value: 14,
       normal: {
-        fill: "#DC861A",
+        fill: "#7F53CB",
         hatchFill: "percent50",
       },
     },
@@ -303,16 +303,23 @@ anychart.onDocumentLoad(function () {
       x: "Gary Halvorson",
       value: 54,
       normal: {
-        fill: "#D2C385",
+        fill: "#A472FA",
         hatchFill: "percent50",
       },
     },
-    { x: "James Burrows", value: 15 },
+    {
+      x: "James Burrows",
+      value: 15,
+      normal: {
+        fill: "#8350DC",
+        hatchfill: "percent50",
+      },
+    },
     {
       x: "Kevin S. Bright",
       value: 53,
       normal: {
-        fill: "#715567",
+        fill: "#793AE7",
         hatchFill: "percent50",
       },
     },
@@ -324,18 +331,31 @@ anychart.onDocumentLoad(function () {
         hatchFill: "percent50",
       },
     },
-    { x: "Others", value: 44 },
-    { x: "Peter Bonerz", value: 12 },
+    {
+      x: "Others",
+      value: 44,
+      normal: {
+        fill: "#9C8CD4",
+        hatchFill: "percent50",
+      },
+    },
+    {
+      x: "Peter Bonerz",
+      value: 12,
+      normal: {
+        fill: "#351C5F",
+        hatchFill: "percent50",
+      },
+    },
   ]);
 
   chart
     .tooltip()
     .format("Episodes: {%value}{groupsSeparator:\\,, decimalsCount:3}");
   chart.legend().itemsLayout("horizontal-expandable");
-  chart.title("Number of Episodes by Director");
+  chart.title("");
   chart.container("episodes-by-director__pie-chart");
-  // chart.background().fill("#9c8cd4");
-  // chart.fontColor("black");
+  chart.background().fill("#f1f0e9");
   chart.draw();
 });
 
@@ -349,6 +369,7 @@ anychart.onDocumentLoad(function () {
   chart.container("avg-viewers-season");
   chart.xAxis().title("Season");
   chart.yAxis().title("Viewers");
+  chart.background().fill("#f1f0e9");
   chart.draw();
 });
 
@@ -368,6 +389,7 @@ anychart.onDocumentLoad(function () {
   chart.data(viewsPerEpisode);
   chart.title("Views Per Episode");
   chart.container("views-per-episode");
+  chart.background().fill("#f1f0e9");
   chart.draw();
 });
 
@@ -393,6 +415,7 @@ anychart.onDocumentLoad(function () {
   chart.title("Highest and Lowest Viewed Directors");
   chart.xAxis().title("Director");
   chart.yAxis().title("Total Views");
+  chart.background().fill("#f1f0e9");
   chart.draw();
 });
 
@@ -412,6 +435,8 @@ const series = chart.column(data);
 
 chart.xAxis().title("Director");
 chart.yAxis().title("Average Episode Views");
+
 series.name("Avg. Views/episode");
 chart.container("highest-average-per-views__column-chart");
+chart.background().fill("#f1f0e9");
 chart.draw();
