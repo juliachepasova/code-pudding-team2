@@ -273,7 +273,7 @@ const getRandomIndex = (data) => {
 };
 
 //variables and functions to handle Joey's images being clicked
-const joeyImages = document.querySelectorAll(".friends-image_content_joey");
+const joeyImage = document.querySelector(".friends-image_content_joey");
 const joeyURLs = [
   "https://youtu.be/Iht75-LF7mE",
   "https://tenor.com/view/joey-tribiani-joey-matt-leblanc-liza-kudrow-turkey-gif-21815406",
@@ -287,14 +287,10 @@ const handleJoeyClick = () => {
   window.open(joeyURLs[index]);
 };
 
-joeyImages.forEach((joey) => {
-  joey.addEventListener("click", handleJoeyClick);
-});
+joeyImage.addEventListener("click", handleJoeyClick);
 
 //variables and functions to handle Chandler's images being clicked
-const chandlerImages = document.querySelectorAll(
-  ".friends-image_content_chandler"
-);
+const chandlerImage = document.querySelector(".friends-image_content_chandler");
 const chandlerURLs = [
   "https://qph.cf2.quoracdn.net/main-qimg-43f45e41b6c405433d6f2587bbcd714f-c",
   "https://qph.cf2.quoracdn.net/main-qimg-5b96c2a6db9cf595d448f72acab239a0-c",
@@ -308,12 +304,10 @@ const handleChandlerClick = () => {
   window.open(chandlerURLs[index]);
 };
 
-chandlerImages.forEach((chandler) => {
-  chandler.addEventListener("click", handleChandlerClick);
-});
+chandlerImage.addEventListener("click", handleChandlerClick);
 
 //variables and functions to handle Ross's images being clicked
-const rossImages = document.querySelectorAll(".friends-image_content_ross");
+const rossImage = document.querySelector(".friends-image_content_ross");
 const rossURLs = [
   "https://64.media.tumblr.com/7ec9c368d15db5f2f40fba46d9af919e/c253dfe3fbb6dfab-9d/s1280x1920/8988474b73ee29e50af3ead92eb3f4bb30abfd88.jpg",
   "https://www.youtube.com/watch?v=H7S7CwkttV0",
@@ -327,12 +321,10 @@ const handleRossClick = () => {
   window.open(rossURLs[index]);
 };
 
-rossImages.forEach((ross) => {
-  ross.addEventListener("click", handleRossClick);
-});
+rossImage.addEventListener("click", handleRossClick);
 
 //variables and functions to handle Monica's images being clicked
-const monicaImages = document.querySelectorAll(".friends-image_content_monica");
+const monicaImage = document.querySelector(".friends-image_content_monica");
 const monicaURLs = [
   "https://tenor.com/view/monica-friends-gif-26132296",
   "https://www.youtube.com/watch?v=JA1aky30IpI",
@@ -346,12 +338,10 @@ const handleMonicaClick = () => {
   window.open(monicaURLs[index]);
 };
 
-monicaImages.forEach((monica) => {
-  monica.addEventListener("click", handleMonicaClick);
-});
+monicaImage.addEventListener("click", handleMonicaClick);
 
 //variables and functions to handle Rachel's images being clicked
-const rachelImages = document.querySelectorAll(".friends-image_content_rachel");
+const rachelImage = document.querySelector(".friends-image_content_rachel");
 const rachelURLs = [
   "https://www.instagram.com/p/CW_SERIM1Gl/?utm_source=ig_embed&ig_rid=8910527a-4122-4e53-ae5c-9db921a0ef1e",
   "https://giphy.com/gifs/Friends-season-9-episode-8-the-one-with-rachels-other-sister-YSBt5A3MB45EfyH00t/fullscreen",
@@ -365,12 +355,10 @@ const handleRachelClick = () => {
   window.open(rachelURLs[index]);
 };
 
-rachelImages.forEach((rachel) => {
-  rachel.addEventListener("click", handleRachelClick);
-});
+rachelImage.addEventListener("click", handleRachelClick);
 
 //variables and functions to handle Phoebe's images being clicked
-const phoebeImages = document.querySelectorAll(".friends-image_content_phoebe");
+const phoebeImage = document.querySelector(".friends-image_content_phoebe");
 const phoebeURLs = [
   "https://i.imgflip.com/5rsmux.jpg",
   "https://www.youtube.com/shorts/kuzjP9uODrs",
@@ -384,9 +372,7 @@ const handlePhoebeClick = () => {
   window.open(phoebeURLs[index]);
 };
 
-phoebeImages.forEach((phoebe) => {
-  phoebe.addEventListener("click", handlePhoebeClick);
-});
+phoebeImage.addEventListener("click", handlePhoebeClick);
 
 //pie chart for episodes per director
 anychart.onDocumentLoad(function () {
@@ -636,7 +622,6 @@ chart
 
 chart.xAxis().title("Director");
 chart.yAxis().title("Average Episode Views");
-// chart.yAxis().labels().rotation(-90);
 chart.xAxis().labels().rotation(-75);
 
 series.name("Avg. Views/episode");

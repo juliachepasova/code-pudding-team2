@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: repeat(6, minmax(120px, auto));
   grid-template-areas: "joey chandler ross monica rachel phoebe";
+  justify-items: center;
 }
 
 .friends-image {
