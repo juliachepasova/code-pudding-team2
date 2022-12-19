@@ -1,11 +1,56 @@
 .friends-images {
   margin: 100px 0;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(120px, auto));
+  grid-template-areas: "joey chandler ross monica rachel phoebe";
 }
 
 .friends-image {
   width: 120px;
+  height: 179px;
   border-radius: 15%;
   cursor: pointer;
+}
+
+.friends-image_content_joey {
+  grid-area: joey;
+}
+
+.friends-image_content_chandler {
+  grid-area: chandler;
+}
+
+.friends-image_content_ross {
+  grid-area: ross;
+}
+
+.friends-image_content_monica {
+  grid-area: monica;
+}
+
+.friends-image_content_rachel {
+  grid-area: rachel;
+}
+
+.friends-image_content_phoebe {
+  grid-area: phoebe;
+}
+
+@media screen and (max-width: 800px) {
+  .friends-images {
+    grid-template-columns: repeat(3, minmax(60px, auto));
+    grid-template-rows: auto;
+    grid-template-areas:
+      "joey chandler ross"
+      "monica rachel phoebe";
+    justify-items: center;
+    row-gap: 10px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .friends-image {
+    width: 60px;
+    height: 90px;
+  }
 }
