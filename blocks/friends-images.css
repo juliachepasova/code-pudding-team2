@@ -1,0 +1,11 @@
+.friends-images {
+  margin: 100px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.friends-image {
+  width: 120px;
+  border-radius: 15%;
+  cursor: pointer;
+}
