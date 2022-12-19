@@ -1,11 +1,32 @@
 .highest-average-per-views {
   padding-bottom: 40px;
+  padding-bottom: 40px;
+  display: grid;
+  grid-template-columns: minmax(279px, 400px) minmax(auto, 900px);
+  grid-template-areas:
+    "title paragraph"
+    "title chart";
+  column-gap: 64px;
+  row-gap: 25px;
 }
 .highest-average-per-views__title {
-  text-align: center;
+  grid-area: title;
+  font-size: 32px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.highest-average-per-views__paragraph-container {
+  max-width: 590px;
+}
+
+.highest-average-per-views__paragraph {
+  grid-area: paragraph;
+  margin: 0;
 }
 
 .highest-average-per-views__column-chart {
-  width: 900px;
+  max-width: 900px;
   height: 400px;
+  grid-area: chart;
 }
