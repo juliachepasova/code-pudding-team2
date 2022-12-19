@@ -15,9 +15,6 @@ const highestViewedDirectors = [
   ["Michael Lembeck", 52900000.0],
   ["Kevin S. Bright", 52460000.0],
   ["James Burrows", 33600000.0],
-  // ["Kevin S. Bright & Gary Halvorson", 17230000.0],
-  // ["Arlene Sanford", 18200000.0],
-  // ["Todd Holland", 21880000.0],
 ];
 
 const lowestViewedDirectors = [
@@ -264,6 +261,28 @@ const viewsPerEpisode = [
   { x: "E17", y: "S10", heat: 52460000.0 },
   { x: "E18", y: "S10", heat: 52460000.0 },
 ];
+
+//joey image elements nodelist and URLS to images, videos, gifs of joey
+const joeyImages = document.querySelectorAll(".friends-image_content_joey");
+const joeyURLs = [
+  "https://youtu.be/Iht75-LF7mE",
+  "https://tenor.com/view/joey-tribiani-joey-matt-leblanc-liza-kudrow-turkey-gif-21815406",
+  "https://pbs.twimg.com/media/FJjXxndXoAEzh6j?format=png&name=small",
+];
+
+//function to get random number between 0 and length of array
+const getRandomIndex = (data) => {
+  return Math.floor(Math.random() * data.length);
+};
+
+const handleJoeyClick = () => {
+  const index = getRandomIndex(joeyURLs);
+  window.open(joeyURLs[index]);
+};
+
+joeyImages.forEach((joey) => {
+  joey.addEventListener("click", handleJoeyClick);
+});
 
 //pie chart for episodes per director
 anychart.onDocumentLoad(function () {
