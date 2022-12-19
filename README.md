@@ -4,13 +4,13 @@ This project is a visual essay for Code Pudding with Practicum by Yandex. Our te
 
 ## Project Features
 
-Semantic HTML
-CSS grid
-CSS media queries
-Responsive web design
-JavaScript
-Jupyter Notebook
-Python
+- Semantic HTML
+- CSS grid
+- CSS media queries
+- Responsive web design
+- JavaScript
+- Jupyter Notebook
+- Python
 
 ## Live version
 
