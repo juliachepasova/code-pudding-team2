@@ -372,6 +372,8 @@ anychart.onDocumentLoad(function () {
   chart.xAxis().title("Season");
   chart.yAxis().title("Viewers");
   chart.background().fill("#f1f0e9");
+  column.normal().fill("#695192");
+  column.normal().stroke(null);
   chart.draw();
 });
 
@@ -381,7 +383,7 @@ anychart.onDocumentLoad(function () {
   const customColorScale = anychart.scales.linearColor();
 
   // customColorScale.colors(["#FFFFFF", "FF0000"]);
-  customColorScale.colors(["0074FF", "#FF0000"]);
+  customColorScale.colors(["E6D9FD", "#695192"]);
 
   chart.tooltip().titleFormat("{%y} {%x}");
   chart
@@ -419,6 +421,8 @@ anychart.onDocumentLoad(function () {
   chart.yAxis().title("Total Views");
   chart.xAxis().labels().rotation(-75);
   chart.background().fill("#f1f0e9");
+  column.normal().fill("#695192");
+  column.normal().stroke(null);
   chart.draw();
 });
 
@@ -446,6 +450,8 @@ anychart.onDocumentLoad(function () {
   chart.yAxis().title("Total Views");
   chart.xAxis().labels().rotation(-75);
   chart.background().fill("#f1f0e9");
+  column.normal().fill("#695192");
+  column.normal().stroke(null);
   chart.draw();
 });
 
@@ -465,10 +471,12 @@ const series = chart.column(data);
 
 chart.xAxis().title("Director");
 chart.yAxis().title("Average Episode Views");
-chart.yAxis().labels().rotation(-90);
+//chart.yAxis().labels().rotation(-90);
 chart.xAxis().labels().rotation(-75);
 
 series.name("Avg. Views/episode");
 chart.container("highest-average-per-views__column-chart");
 chart.background().fill("#f1f0e9");
+series.normal().fill("#695192");
+series.normal().stroke(null);
 chart.draw();
