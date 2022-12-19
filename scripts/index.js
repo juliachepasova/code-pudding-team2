@@ -15,9 +15,6 @@ const highestViewedDirectors = [
   ["Michael Lembeck", 52900000.0],
   ["Kevin S. Bright", 52460000.0],
   ["James Burrows", 33600000.0],
-  // ["Kevin S. Bright & Gary Halvorson", 17230000.0],
-  // ["Arlene Sanford", 18200000.0],
-  // ["Todd Holland", 21880000.0],
 ];
 
 const lowestViewedDirectors = [

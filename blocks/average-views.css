@@ -1,6 +1,5 @@
 .highest-average-per-views {
-  padding-bottom: 40px;
-  padding-bottom: 40px;
+  margin-bottom: 100px;
   display: grid;
   grid-template-columns: minmax(279px, 400px) minmax(auto, 900px);
   grid-template-areas:
@@ -29,4 +28,30 @@
   max-width: 900px;
   height: 400px;
   grid-area: chart;
+  border: 1px solid #695192;
+}
+
+@media screen and (max-width: 1000px) {
+  .highest-average-per-views {
+    grid-template-areas:
+      "title paragraph"
+      "chart chart";
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .highest-average-per-views {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "title"
+      "paragraph"
+      "chart";
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .highest-average-per-views__paragraph {
+    font-size: 14px;
+  }
 }

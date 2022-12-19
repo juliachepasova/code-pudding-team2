@@ -1,53 +1,45 @@
-.viewerships {
-  margin-bottom: 100px;
+.conclusion {
   display: grid;
   grid-template-columns: minmax(279px, 400px) minmax(auto, 900px);
   grid-template-areas:
-    "title paragraph"
-    "title chart";
+    "title first-para"
+    "title second-para";
   column-gap: 64px;
   row-gap: 25px;
 }
-.viewerships__title {
+
+.conclusion__title {
   grid-area: title;
   font-size: 32px;
   line-height: 1.2;
   margin: 0;
 }
 
-.viewerships__paragraph-container {
-  max-width: 590px;
-}
-
-.viewerships__paragraph {
+.conclusion__paragraph {
   margin: 0;
 }
 
-.viewerships__container {
-  grid-area: chart;
+.conclusion__paragraph_content_first {
+  grid-area: first-para;
 }
 
-@media screen and (max-width: 1000px) {
-  .viewerships {
-    grid-template-areas:
-      "title paragraph"
-      "chart chart";
-  }
+.conclusion__paragraph_content_second {
+  grid-area: second-para;
 }
 
 @media screen and (max-width: 850px) {
-  .viewerships {
+  .conclusion {
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas:
       "title"
-      "paragraph"
-      "chart";
+      "first-para"
+      "second-para";
   }
 }
 
 @media screen and (max-width: 400px) {
-  .viewerships__paragraph-container {
+  .conclusion__paragraph {
     font-size: 14px;
   }
 }

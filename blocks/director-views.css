@@ -30,9 +30,42 @@
   grid-template-columns: auto auto;
   column-gap: 20px;
   grid-area: chart;
+  border: 1px solid #695192;
 }
 
 .director-views__bar-chart {
   max-width: 450px;
   height: 400px;
+}
+
+@media screen and (max-width: 1000px) {
+  .director-views {
+    grid-template-areas:
+      "title paragraph"
+      "chart chart";
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .director-views {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "title"
+      "paragraph"
+      "chart";
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .director-views__container {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .director-views__paragraph {
+    font-size: 14px;
+  }
 }
