@@ -30,3 +30,28 @@
   height: 400px;
   grid-area: chart;
 }
+
+@media screen and (max-width: 1000px) {
+  .highest-average-per-views {
+    grid-template-areas:
+      "title paragraph"
+      "chart chart";
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .highest-average-per-views {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "title"
+      "paragraph"
+      "chart";
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .highest-average-per-views__paragraph {
+    font-size: 14px;
+  }
+}

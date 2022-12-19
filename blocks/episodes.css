@@ -29,3 +29,28 @@
   height: 400px;
   grid-area: chart;
 }
+
+@media screen and (max-width: 1000px) {
+  .episodes-by-director {
+    grid-template-areas:
+      "title paragraph"
+      "chart chart";
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .episodes-by-director {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "title"
+      "paragraph"
+      "chart";
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .episodes-by-director__paragraph {
+    font-size: 14px;
+  }
+}

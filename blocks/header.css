@@ -1,11 +1,11 @@
-@keyframes rotation {
+/* @keyframes rotation {
   from {
     transform: rotate(20deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 .header {
   margin-bottom: 200px;
@@ -40,12 +40,23 @@
 
 .header__description-image {
   width: 200px;
-  height: 200px;
   position: relative;
-  rotate: 20deg;
+  border-radius: 50%;
+  /* rotate: 20deg; */
   top: 40px;
+  transition: transform 1.6s linear;
 }
 
 .header__description-image:hover {
-  animation: rotation 1.3s linear;
+  transform: rotate(360deg);
+}
+
+@media screen and (max-width: 360px) {
+  .header__title {
+    font-size: 50px;
+  }
+
+  .header__image {
+    width: 250px;
+  }
 }

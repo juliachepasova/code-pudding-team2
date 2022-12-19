@@ -2,14 +2,27 @@
   display: grid;
   grid-template-columns: auto auto;
   column-gap: 20px;
+  grid-template-areas: "bar-chart heatmap-chart";
 }
 
 .views__avg-viewers-season-bar-chart {
   max-width: 450px;
   height: 400px;
+  grid-area: bar-chart;
 }
 
 .views__views-per-episode-heatmap-chart {
   max-width: 450px;
   height: 400px;
+  grid-area: heatmap-chart;
+}
+
+@media screen and (max-width: 650px) {
+  .views {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "bar-chart"
+      "heatmap-chart";
+  }
 }

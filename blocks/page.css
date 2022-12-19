@@ -1,5 +1,4 @@
 .page {
-  min-width: 320px;
   max-width: 1300px;
   margin: 0 auto;
   font-family: "Inter", "Arial", sans-serif;
@@ -7,4 +6,5 @@
   color: #695192;
   font-size: 16px;
   line-height: 20px;
+  padding: 0 40px;
 }
