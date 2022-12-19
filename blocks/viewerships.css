@@ -1,6 +1,27 @@
 .viewerships {
-  padding-bottom: 40px;
+  margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: minmax(279px, 400px) minmax(auto, 900px);
+  grid-template-areas:
+    "title paragraph"
+    "title chart";
+  column-gap: 64px;
+  row-gap: 25px;
 }
 .viewerships__title {
-  text-align: center;
+  grid-area: title;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.viewerships__paragraph-container {
+  max-width: 590px;
+}
+
+.viewerships__paragraph {
+  margin: 0;
+}
+
+.viewerships__container {
+  grid-area: chart;
 }

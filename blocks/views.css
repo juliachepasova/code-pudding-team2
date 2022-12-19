@@ -1,15 +1,15 @@
 .views {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 20px;
 }
 
 .views__avg-viewers-season-bar-chart {
-  width: 450px;
+  max-width: 450px;
   height: 400px;
 }
 
 .views__views-per-episode-heatmap-chart {
-  width: 450px;
+  max-width: 450px;
   height: 400px;
 }
