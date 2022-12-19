@@ -17,6 +17,7 @@
 }
 
 .header__title {
+  font-family: "Playfair Display", serif;
   font-size: 60px;
   line-height: 72px;
   font-weight: 500;
@@ -30,7 +31,6 @@
 }
 
 .header__description {
-  font-family: "Noto Serif", "Times New Roman", serif;
   font-size: 20px;
   line-height: 30px;
   margin: auto;
