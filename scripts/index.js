@@ -262,6 +262,11 @@ const viewsPerEpisode = [
   { x: "E18", y: "S10", heat: 52460000.0 },
 ];
 
+const headerImage = document.querySelector(".header__image");
+headerImage.addEventListener("click", () => {
+  window.open("https://youtu.be/Xs-HbHCcK58");
+});
+
 //function to get random number between 0 and length of array
 const getRandomIndex = (data) => {
   return Math.floor(Math.random() * data.length);

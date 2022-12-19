@@ -1,9 +1,8 @@
 .header {
-  margin-bottom: 200px;
+  margin-bottom: 150px;
   padding-top: 30px;
   display: block;
   text-align: center;
-  position: relative;
   box-sizing: border-box;
 }
 
@@ -19,6 +18,7 @@
 
 .header__image {
   width: 300px;
+  cursor: pointer;
 }
 
 .header__description {
@@ -30,12 +30,11 @@
 }
 
 .header__description-image {
+  margin-top: 50px;
   width: 200px;
-  position: relative;
   border-radius: 50%;
-  /* rotate: 20deg; */
-  top: 40px;
   transition: transform 1.6s linear;
+  cursor: pointer;
 }
 
 .header__description-image:hover {
