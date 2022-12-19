@@ -28,6 +28,7 @@
   max-width: 900px;
   height: 400px;
   grid-area: chart;
+  border: 1px solid #695192;
 }
 
 @media screen and (max-width: 1000px) {

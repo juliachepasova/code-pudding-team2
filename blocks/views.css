@@ -3,6 +3,7 @@
   grid-template-columns: auto auto;
   column-gap: 20px;
   grid-template-areas: "bar-chart heatmap-chart";
+  border: 1px solid #695192;
 }
 
 .views__avg-viewers-season-bar-chart {

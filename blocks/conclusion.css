@@ -1,0 +1,45 @@
+.conclusion {
+  display: grid;
+  grid-template-columns: minmax(279px, 400px) minmax(auto, 900px);
+  grid-template-areas:
+    "title first-para"
+    "title second-para";
+  column-gap: 64px;
+  row-gap: 25px;
+}
+
+.conclusion__title {
+  grid-area: title;
+  font-size: 32px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.conclusion__paragraph {
+  margin: 0;
+}
+
+.conclusion__paragraph_content_first {
+  grid-area: first-para;
+}
+
+.conclusion__paragraph_content_second {
+  grid-area: second-para;
+}
+
+@media screen and (max-width: 850px) {
+  .conclusion {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "title"
+      "first-para"
+      "second-para";
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .conclusion__paragraph {
+    font-size: 14px;
+  }
+}
